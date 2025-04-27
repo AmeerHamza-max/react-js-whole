@@ -1,0 +1,115 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000000, #434343); /* Black to dark gray gradient */
+    color: #fff;
+  }
+  
+  .movies-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #e50914;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Grid layout */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Movie card */
+  .movie-card {
+    position: relative;
+    width: 250px;
+    height: 375px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #1a1a1a; /* Light black background for the card */
+    border: 2px solid #fff; /* White border around the card */
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.5); /* Slight white glow effect */
+  }
+  
+  /* Movie poster */
+  .movie-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+  }
+  
+  .movie-card:hover .movie-poster {
+    opacity: 0.2;
+  }
+  
+  /* Overlay with movie details */
+  .movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  .movie-card:hover .movie-overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  /* Movie title and overview */
+  .movie-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #e50914;
+    text-transform: uppercase;
+  }
+  
+  .movie-overview {
+    font-size: 0.9rem;
+    color: #ccc;
+    line-height: 1.4;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 1.2rem;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

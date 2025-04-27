@@ -1,0 +1,43 @@
+/* Header.css */
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(246, 121, 121);
+    padding: 10px 20px;
+    color: white;
+}
+
+
+.navbar__logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Navbar links styling */
+.navbar__links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar__links li {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar__links li:hover {
+    color: #61dafb;
+}
+
+/* Link styling to remove default underlining */
+.navbar__links a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar__links a:hover {
+    text-decoration: none;
+}

@@ -1,0 +1,79 @@
+/* Card container */
+.card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 300px;
+  margin: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #000; /* Black background */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: #020024;
+}
+
+/* Hover effect for card */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styles */
+.card-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Text container inside the card */
+.card-text {
+  padding: 15px;
+  color: #fff; /* White text for contrast */
+}
+
+/* Title styles */
+.card-text h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fff; /* White title */
+}
+
+/* Text styles */
+.card-text p {
+  font-size: 0.9em;
+  color: #ccc; /* Light grey text */
+  line-height: 1.4;
+}
+
+/* Visited link styles */
+.card-text a:visited {
+  color: #aaa; /* Light grey for visited links */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 200px; /* Adjust card size for tablets and small screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%; /* Full width for mobile */
+    margin: 10px 0;
+  }
+
+  .card-text h3 {
+    font-size: 1.1em; /* Adjust title font size for smaller screens */
+  }
+
+  .card-text p {
+    font-size: 0.8em; /* Adjust text size for smaller screens */
+  }
+}

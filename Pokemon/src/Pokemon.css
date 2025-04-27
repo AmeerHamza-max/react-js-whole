@@ -1,0 +1,207 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Main container for the cards */
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Show 4 cards per row on larger screens */
+    gap: 1.5rem;
+    list-style: none;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  /* Individual Card */
+  li {
+    background-color: #1f1f1f; /* Dark background for each card */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem;
+  }
+  
+  li:hover {
+    transform: translateY(-10px) scale(1.05); /* Hover effect to lift card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Image Section */
+  li img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  li:hover img {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Card Content */
+  li h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  li div {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Properties like Height, Weight, etc. */
+  li p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text color for details */
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  li p span {
+    font-weight: bold;
+    color: #007bff; /* Blue color for labels */
+  }
+  
+  /* Hover effect for details */
+  li p:hover {
+    color: #ffcc00; /* Yellow color on hover for details */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+  }
+  
+  /* Abilities */
+  li .abilities {
+    color: #c0c0c0; /* Light grey text for abilities */
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  li .abilities:hover {
+    color: #ffcc00; /* Change color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  li .abilities span {
+    font-weight: bold;
+  }
+  
+  /* Search input styling */
+  input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    margin: 1rem auto;
+    display: block;
+    border: 2px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #222;
+    color: #fff;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Header styling */
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    color: #007bff; /* Bright color for header */
+    text-transform: uppercase;
+    margin: 0;
+  }
+  
+  /* Flexbox layout for properties in a row */
+  .properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .properties div {
+    width: calc(33.33% - 10px); /* 3 properties per row for larger screens */
+    text-align: left;
+  }
+  
+  .properties div:nth-child(4),
+  .properties div:nth-child(5),
+  .properties div:nth-child(6),
+  .properties div:nth-child(7) {
+    width: calc(25% - 10px); /* 4 properties per row */
+  }
+  
+  .properties div p {
+    margin: 5px 0;
+  }
+  
+  .properties div:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Highlight background on hover */
+    cursor: pointer;
+  }
+  
+  /* Responsive Layout for smaller devices */
+  @media (max-width: 1024px) {
+    ul {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row for tablet screens */
+    }
+  
+    .properties div {
+      width: calc(50% - 10px); /* 2 properties per row for tablets */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    ul {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row for mobile */
+    }
+  
+    .properties div {
+      width: 100%; /* 1 property per row for mobile */
+    }
+  
+    li img {
+      height: 200px;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    input[type="text"] {
+      max-width: 300px; /* Adjust width for mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    ul {
+      grid-template-columns: 1fr; /* 1 card per row for very small screens */
+    }
+  
+    li img {
+      height: 180px;
+    }
+  
+    header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  

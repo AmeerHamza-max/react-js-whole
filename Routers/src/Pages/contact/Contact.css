@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background for the page */
+    color: #fff; /* White text */
+  }
+  
+  .contact-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #1a1a1a; /* Dark grey background for the form container */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .contact-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Heading */
+  .contact-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffd700; /* Gold color for the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Form Styling */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ddd; /* Light grey labels */
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444; /* Dark grey border */
+    border-radius: 5px;
+    background-color: #222; /* Slightly lighter grey background for inputs */
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #ffd700; /* Gold border on focus */
+    outline: none;
+    transform: scale(1.02); /* Slight zoom effect */
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #ffd700; /* Gold button background */
+    color: #000; /* Black text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .submit-button:hover {
+    background-color: #e6c200; /* Darker gold on hover */
+    transform: scale(1.1);
+  }
+  
+  .submit-button:active {
+    transform: scale(1);
+    background-color: #cc9900; /* Even darker gold on click */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 1.5rem;
+    }
+  
+    .contact-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    input,
+    textarea {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button {
+      font-size: 0.9rem;
+      padding: 0.7rem 1.2rem;
+    }
+  }
+  
